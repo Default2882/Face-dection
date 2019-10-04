@@ -9,8 +9,7 @@ from matplotlib.pyplot import imshow
 fh = open("image.zip", "rb")
 files = zipfile.ZipFile(fh)
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
-for img in files.namelist():
-    filecounter = 1
+for i, img in eumerate(files.namelist()):
     files.extract(img)
     image = cv.imread(img)
     images = []
@@ -42,6 +41,5 @@ for img in files.namelist():
         else:
             xaxis=xaxis+first_image[2]
     #contact_sheet = contact_sheet.resize((int(contact_sheet.width),int(contact_sheet.height) ))
-    contact_sheet.save("finimage{}.jpeg".format(filecounter))
-    filecounter+=1
+    contact_sheet.save("finimage_{}.jpeg".format(str(i))
     #if(True): break
