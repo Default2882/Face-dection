@@ -14,7 +14,7 @@
 pip3 install numpy pillow opencv-python pytesseract matplotlib
 ```
 
-## Behing the scnenes: 
+## Behing the scenes: 
 
 **Hello!** This is a personal project made during when i was playing around with opencv and other libraries.
 
